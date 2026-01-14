@@ -1,178 +1,143 @@
 <template>
-  <div class="portfolio">
-    <div class="content-wrapper">
+  <section class="education">
+  <h2>Education</h2>
 
-      <!-- Education Section -->
-      <Card class="education">
-        <template #header>
-          <h2>Education</h2>
-        </template>
-        <template #content>
-        <div class="education-details">
-          <div v-for="education in educations" :key="education.period">
-            <h3>{{ education.degree }}</h3>
-            <p>{{ education.institution }}
-              <span class="education-period">{{ education.period }}</span>
-            </p>
-          </div>
-        </div>
-        </template>
-      </Card>
-
-
-      <!-- Skills Section -->
-      <Card class="skills">
-        <template #header>
-          <h2>Skills</h2>
-        </template>
-        <template #content>
-          <div class="skills-wrapper">
-            <div class="skills-column">
-              <div v-for="skill in column1Skills" :key="skill.name" class="skill-item">
-                <i :class="skill.icon" class="skill-icon"></i>
-                <Tag :value="skill.name" severity="info" class="skill-tag" />
-              </div>
-            </div>
-            <div class="skills-column">
-              <div v-for="skill in column2Skills" :key="skill.name" class="skill-item">
-                <i :class="skill.icon" class="skill-icon"></i>
-                <Tag :value="skill.name" severity="info" class="skill-tag" />
-              </div>
-            </div>
-          </div>
-          </template>
-      </Card>
-
+  <div
+    class="education-container"
+    style="
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    "
+  >
+    <div
+      v-for="education in educations"
+      :key="education.course"
+      class="education-card"
+      style="
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fff;
+      "
+    > 
+      <div class="education-details">
+        <h3>{{ education.course }}</h3>
+        <h4>{{ education.college }}</h4>
+        <p>{{ education.startDate }} – {{ education.endDate }}</p>
+        <p class="education-description">
+              {{ education.description }}
+        </p>
+      </div>
     </div>
-
   </div>
+</section>
+
 </template>
 
 <script setup>
-
-// Import external CSS file
-// import '@/assets/styles/about.css';
-
-const column1Skills = [
-  { name: 'Java', icon: 'fab fa-java' },
-  { name: 'Spring', icon: 'fas fa-leaf' },
-  { name: 'JavaScript', icon: 'fab fa-js' },
-  { name: 'PrimeFaces', icon: 'fas fa-palette' },
-];
-
-const column2Skills = [
-  { name: 'Vue.js', icon: 'fab fa-vuejs' },
-  { name: 'CSS', icon: 'fab fa-css3-alt' },
-  { name: 'HTML', icon: 'fab fa-html5' },
-  { name: 'MySQL', icon: 'fas fa-database' },
-];
-
+import synergyImg from '@/assets/synergy.png';
+import softhoverImg from '@/assets/softhover.jpg';
 
 const educations = [
-  { degree: "BSc in Computer Science and Information Technology",
-    institution: "Aberdeen International College, Lalitpur, Nepal",
-    period: "2011 - 2015" },
-  { degree: "Science(High School)", institution: "Aishwaraya Vidya Niketan, Dhanghadi, Nepal",
-    period: "2016 - 2018" }
+  {
+  course: "BSc in Computer Science and Information Technology (Bsc.CSIT)",
+  college: "Aberdeen International College, Lalitpur, Nepal",
+  startDate: "2011",
+  endDate: "2015",
+  description: `Equipped with a diverse skill set encompassing programming proficiency in C, C++, Java, and Python, along with a thorough understanding of computer architecture, operating systems, cloud computing, data structures, and algorithms. Experienced in database systems, networking, and security protocols, complemented by a solid grasp of software engineering principles. Proficient in web development technologies and frameworks. Completed coding boot-camps and internships, refining practical coding skills and gaining hands-on industry experience. Additionally, developed essential soft skills such as communication, teamwork, and problem-solving.`
+},
+  {
+    course: "Science (High School)",
+    college: "Aishwaraya Vidya Niketan, Dhanghadi, Nepal",
+    startDate: "2009",
+    endDate: "2011",
+    description:"Explored Physics, Mathematics, Chemistry, and Biology, learning to think carefully and see how things in our daily life are connected through science."
+   }
 ];
-
-
 </script>
 
 <style scoped>
-
-.portfolio {
-  padding: 50px 20px;
-  background-color: #f0f0f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //height: 70vh;
+.education {
+  min-height:880px;
+  padding: 2rem;
+  background: #f5f5f5;
+  color: #333;
+  //height: 80vh;
 }
 
-.content-wrapper {
+.education h2 {
+  font-size: 2rem;
+  //margin-bottom: 1rem;
+  text-align: center;
+}
+.education-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 20px;
-  gap: 50px;
+  gap: 2rem;
+  margin-bottom: 30px;
 }
-
-.education, .skills {
-  flex: 1;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.education-card {
+  background: #fff;
   border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.education h2, .skills h2 {
-  font-size: 1.7rem;
-  color: #34495e;
-  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  flex: 1 1 calc(33.333% - 2rem);
   display: flex;
   align-items: center;
 }
-
-.icon {
-  font-size: 2rem;
-  margin-right: 10px;
+.company-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 1.5rem;
 }
-
-.education-details h3 {
-  font-size: 1.3rem;
-  color: #2c3e50;
-}
-
-.education-details p {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  display: flex;
-  justify-content: space-between;
-}
-
-.skills-wrapper {
-  display: flex;
-  justify-content: space-between;
-  /*gap: 1.5rem;*/
-}
-
-.skills-column {
+.education-details {
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.skill-tag {
-  margin-left: 10px;
-  font-size: 1.2rem !important;
-  background-color: transparent !important;
-  color: #34495e !important;
-}
-
-.skill-icon {
+.education-details h3 {
+  margin: 0;
   font-size: 1.5rem;
-  color: #3498db;
+}
+.education-details h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+.education-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.education-details ul {
+  padding-left: 20px;
+
+}
+.education-details li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .education-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
 
 @media (max-width: 768px) {
-  .content-wrapper {
+  .education-card {
+    flex: 1 1 100%;
     flex-direction: column;
+    text-align: center;
   }
 
-  .education, .skills {
-    width: 100%;
+  .company-logo {
+    margin-bottom: 1rem;
+  }
+
+  .education-details ul {
+    padding-left: 0;
+    list-style: none;
   }
 }
-</style>
 
+</style>

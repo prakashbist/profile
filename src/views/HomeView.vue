@@ -2,7 +2,6 @@
   <div class="home">
     <section class="intro">
       <img src="@/assets/profile.jpg" alt="Prakash Bist" class="profile-image" />
-
       <h1>Prakash Bist</h1>
       <p>Principal Software Engineer | Computer Science UnderGraduate</p>
       <p class="description-text" style="text-align: justify;">
@@ -14,18 +13,20 @@
     </section>
   </div>
 
-  <AboutView />
+  
   <ExperienceView />
   <ProjectView />
+  <SkillView />
+  <AboutView />
   <ContactView />
 </template>
 
 <script setup>
-// Import external CSS file
-// import '@/assets/styles/home.css';
-import AboutView from "@/views/AboutView.vue";
+
 import ExperienceView from "@/views/ExperienceView.vue";
 import ProjectView from "@/views/ProjectView.vue";
+import SkillView from "@/views/SkillView.vue";
+import AboutView from "@/views/AboutView.vue";
 import ContactView from "@/views/ContactView.vue";
 </script>
 

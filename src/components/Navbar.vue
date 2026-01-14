@@ -19,9 +19,10 @@ const router = useRouter();
 
 const items = [
   { label: 'Home', icon: 'pi pi-fw pi-home', command: () => router.push('/') },
-  { label: 'About', icon: 'pi pi-fw pi-info-circle', command: () => router.push('/about') },
   { label: 'Experience', icon: 'pi pi-fw pi-briefcase', command: () => router.push('/experience') },
   { label: 'Projects', icon: 'pi pi-fw pi-folder', command: () => router.push('/projects') },
+  { label: 'Skill', icon: 'pi pi-fw pi-code', command: () => router.push('/skill') },
+  { label: 'Education', icon: 'pi pi-fw pi-graduation-cap', command: () => router.push('/education') },
   { label: 'Contact', icon: 'pi pi-fw pi-phone', command: () => router.push('/contact') }
 ];
 
