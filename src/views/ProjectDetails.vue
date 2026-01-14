@@ -1,6 +1,6 @@
 <template>
   <section class="project-detail">
-    <h1>{{ project.name }}</h1>
+    <h1>{{project.name}}</h1>
     <img :src="project.imageSrc" alt="Project Image" class="project-img-detail">
     <div class="project-info">
       <p><strong>Description:</strong> {{ project.description }}</p>
@@ -25,7 +25,7 @@ const projects = [
     description: 'Built using Netflix Eureka to manage dynamic service registration and discovery.',
     imageSrc: petImg,
     languages: 'Java',
-    link: 'https://github.com/Shrijanaa1/PersonalExpenseTracker'
+    link: 'https://bitbucket.org/prakashbistdeveloper/serviceregistry'
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const projects = [
     description: 'Developed using Spring WebFlux for non-blocking request routing, including custom filters and security integration.',
     imageSrc: saImg,
     languages: 'Java',
-    link: 'https://github.com/Shrijanaa1/Sentiment-Analysis-Web-App'
+    link: 'https://bitbucket.org/prakashbistdeveloper/apigateway'
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const projects = [
     description: 'Implemented secure login/logout, role-based access control, and JWT-based authentication with Spring Security.',
     imageSrc: customerReachImg,
     languages: 'Java',
-    link: 'https://github.com/Shrijanaa1/CustomerReach'
+    link: 'https://bitbucket.org/prakashbistdeveloper/workspace/projects/DA'
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const projects = [
     description: 'Centralized external configuration management using Spring Cloud Config, supporting multiple environments.',
     imageSrc: hmsImg,
     languages: 'Java',
-    link: 'https://github.com/Shrijanaa1/Hospital-Management-System'
+    link: 'https://bitbucket.org/prakashbistdeveloper/configserver'
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const projects = [
     description: 'Collects, transforms, and analyzes large volumes of data. Handles both batch and real-time processing.',
     imageSrc: hmsImg,
     languages: 'Java',
-    link: 'https://github.com/Shrijanaa1/Hospital-Management-System'
+    link: 'https://bitbucket.org/prakashbistdeveloper/datafusion'
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ const projects = [
     description: 'Automates periodic tasks such as data syncing, cleanup, and report generation using Spring Scheduler.',
     imageSrc: hmsImg,
     languages: 'Java',
-    link: 'https://github.com/Shrijanaa1/Hospital-Management-System'
+    link: 'https://bitbucket.org/prakashbistdeveloper/workspace/projects/DA'
   } 
 ];
 

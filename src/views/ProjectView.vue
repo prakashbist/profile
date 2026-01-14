@@ -1,6 +1,6 @@
 <template>
   <section id="my-projects">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Personal Projects</h2>
     <div class="projects-container">
       <div v-for="project in projects" :key="project.id" class="project-card"
       @click="navigateToDetail(project.id)">
@@ -8,7 +8,7 @@
         <div class="project-info">
           <h3 class="project-name">{{ project.name }}</h3>
          <p>{{ project.description }}</p>      <!-- Dynamic binding -->
-          <a :href="project.link" target="_blank" class="project-link">View Source Code GitHub</a>
+          <a :href="project.link" target="_blank" class="project-link">View Source Code</a>
         </div>
       </div>
 
@@ -36,42 +36,42 @@ const projects = [
     name: 'Service Registry:',
     description: 'Built using Netflix Eureka to manage dynamic service registration and discovery.',
     imageSrc: petImg,
-    link: 'https://github.com/Shrijanaa1/PersonalExpenseTracker'
+    link: 'https://bitbucket.org/prakashbistdeveloper/serviceregistry'
   },
   {
     id: 2,
     name: 'API Gateway',
     description: 'Developed using Spring WebFlux for non-blocking request routing, including custom filters and security integration.',
     imageSrc: saImg,
-    link: 'https://github.com/Shrijanaa1/Sentiment-Analysis-Web-App'
+    link: 'https://bitbucket.org/prakashbistdeveloper/apigateway'
   },
   {
     id: 3,
     name: 'Authentication Module',
     description: 'Implemented secure login/logout, role-based access control, and JWT-based authentication with Spring Security.',
     imageSrc: customerReachImg,
-    link: 'https://github.com/Shrijanaa1/CustomerReach'
+    link: 'https://bitbucket.org/prakashbistdeveloper/workspace/projects/DA'
   },
   {
     id: 4,
     name: 'Config Server',
     description: 'Centralized external configuration management using Spring Cloud Config, supporting multiple environments.',
     imageSrc: hmsImg,
-    link: 'https://github.com/Shrijanaa1/Hospital-Management-System'
+    link: 'https://bitbucket.org/prakashbistdeveloper/configserver'
   },
   {
     id: 5,
     name: 'DataFusion',
     description: 'Collects, transforms, and analyzes large volumes of data. Handles both batch and real-time processing.',
     imageSrc: hmsImg,
-    link: 'https://github.com/Shrijanaa1/Hospital-Management-System'
+    link: 'https://bitbucket.org/prakashbistdeveloper/datafusion'
   },
   {
     id: 6,
     name: 'Scheduler',
     description: 'Automates periodic tasks such as data syncing, cleanup, and report generation using Spring Scheduler.',
     imageSrc: hmsImg,
-    link: 'https://github.com/Shrijanaa1/Hospital-Management-System'
+    link: 'https://bitbucket.org/prakashbistdeveloper/workspace/projects/DA'
   }
   
 ];
