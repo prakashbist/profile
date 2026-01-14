@@ -1,10 +1,10 @@
 <template>
+ <div class="project">
   <section id="my-projects">
     <h2 class="section-title">Personal Projects</h2>
     <div class="projects-container">
       <div v-for="project in projects" :key="project.id" class="project-card"
       @click="navigateToDetail(project.id)">
-        <img :src="project.imageSrc" alt="Project Image" class="project-img">
         <div class="project-info">
           <h3 class="project-name">{{ project.name }}</h3>
          <p>{{ project.description }}</p>      <!-- Dynamic binding -->
@@ -14,6 +14,7 @@
 
     </div>
   </section>
+  </div>
 </template>
 
 <script setup>
@@ -78,6 +79,14 @@ const projects = [
 </script>
 
 <style scoped>
+
+.project {
+  padding: 4rem 2rem 2rem 2rem; /* top padding larger to avoid navbar overlap */
+  background-color: white;
+  color: #333;
+  min-height: 92vh;
+  box-sizing: border-box;
+}
 
 #my-projects {
   padding: 20px;

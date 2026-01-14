@@ -32,6 +32,9 @@
 
     <!-- Social Media Links -->
     <div class="contact-links">
+     <a href="https://bitbucket.org/prakashbistdeveloper" target="_blank" class="contact-link">
+        <i class="fa-brands fa-bitbucket"></i>
+    </a>
       <a href="https://github.com/prakashbist" target="_blank" class="contact-link">
         <i class="pi pi-github"></i>
       </a>
