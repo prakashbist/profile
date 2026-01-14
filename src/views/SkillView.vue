@@ -37,39 +37,44 @@
 
 <script setup>
 const skills = [
-  // Languages
-  { name: "Java", icon: "fab fa-java", level: 95 },
-  { name: "C++", icon: "fas fa-code", level: 85 },
-  { name: "C", icon: "fas fa-terminal", level: 80 },
-  { name: "JavaScript", icon: "fab fa-js", level: 90 },
-  { name: "TypeScript", icon: "fas fa-file-code", level: 85 },
-  { name: "Python", icon: "fab fa-python", level: 75 },
+  // Backend & Architecture
+  { name: "Java (SE/EE/Jakarta)", icon: "fab fa-java", level: 95 }, // [cite: 17, 18, 19]
+  { name: "Spring (Boot/Cloud/MVC)", icon: "fas fa-leaf", level: 95 }, // [cite: 18, 19]
+  { name: "Quarkus & Microservices", icon: "fas fa-bolt", level: 85 }, // [cite: 19, 182]
+  { name: "C/C++", icon: "fas fa-code", level: 80 }, // [cite: 15, 16, 141]
+  { name: "Hibernate & JDBC", icon: "fas fa-database", level: 90 }, // [cite: 68, 81]
+  { name: "Socket Programming", icon: "fas fa-plug", level: 80 }, // [cite: 94, 96]
+  { name: "Kafka", icon: "fas fa-network-wired", level: 90 }, // [cite: 89, 90, 98]
 
-  // Frameworks & Libraries
-  { name: "Spring Boot", icon: "fas fa-leaf", level: 95 },
-  { name: "Spring Cloud", icon: "fas fa-cloud", level: 90 },
-  { name: "JakartaEE", icon: "fas fa-server", level: 85 },
-  { name: "Quarkus", icon: "fas fa-bolt", level: 80 },
-  { name: "Angular", icon: "fab fa-angular", level: 85 },
-  { name: "Vue.js", icon: "fab fa-vuejs", level: 90 },
-  { name: "Hibernate", icon: "fas fa-database", level: 90 },
+  // Frontend & UI
+  { name: "JSF/JSP (PrimeFaces)", icon: "fas fa-server", level: 85 }, // [cite: 20]
+  { name: "Vue.js (PrimeVue/Vuetify)", icon: "fab fa-vuejs", level: 90 }, // [cite: 22]
+  { name: "Angular", icon: "fab fa-angular", level: 85 }, // [cite: 21]
+  { name: "TypeScript/JavaScript/jQuery", icon: "fab fa-js", level: 90 }, // [cite: 61, 62, 64]
+  { name: "HTML5/CSS/Bootstrap", icon: "fab fa-html5", level: 95 }, // [cite: 23, 24, 60]
 
-  // UI Components
-  { name: "PrimeVue", icon: "fas fa-palette", level: 90 },
-  { name: "PrimeFaces", icon: "fas fa-gem", level: 85 },
-  { name: "Vuetify", icon: "fab fa-vuejs", level: 80 },
-  { name: "Bootstrap", icon: "fab fa-bootstrap", level: 90 },
-  { name: "HTML", icon: "fab fa-html5", level: 95 },
-  { name: "CSS", icon: "fab fa-css3-alt", level: 90 },
+  // Data & Infrastructure
+  { name: "MySQL & MS-SQL", icon: "fas fa-table", level: 90 }, // [cite: 65, 66]
+  { name: "Docker & Minicube", icon: "fab fa-docker", level: 85 }, // [cite: 121, 122, 124]
+  { name: "Jenkins & CI/CD", icon: "fab fa-jenkins", level: 85 }, // [cite: 80, 125]
+  { name: "Git / Mercurial / SVN", icon: "fab fa-git-alt", level: 95 }, // 
+  { name: "Maven & Gradle", icon: "fas fa-box-open", level: 90 }, // [cite: 82, 85]
+  { name: "Linux/Unix/Windows", icon: "fab fa-linux", level: 85 }, // [cite: 123, 141]
+  { name: "WEKA (Data Mining)", icon: "fas fa-brain", level: 75 }, // 
 
-  // Tools & Infrastructure
-  { name: "Docker", icon: "fab fa-docker", level: 85 },
-  { name: "Jenkins", icon: "fab fa-jenkins", level: 80 },
-  { name: "Kafka", icon: "fas fa-stream", level: 80 },
-  { name: "MySQL", icon: "fas fa-database", level: 90 },
-  { name: "MS-SQL", icon: "fas fa-table", level: 85 },
-  { name: "Git", icon: "fab fa-git-alt", level: 90 }
-];
+  // Performance & Quality
+  { name: "JUnit/Mockito/TestNG", icon: "fas fa-check-double", level: 90 }, // [cite: 99, 104, 108]
+  { name: "JVM Profiling (JVisualVM/JRebel)", icon: "fas fa-microscope", level: 85 }, // [cite: 134, 135, 137]
+  { name: "Memory Analysis (HeapHero/GCeasy)", icon: "fas fa-memory", level: 85 }, // [cite: 140, 141]
+  { name: "SonarQube & JaCoCo", icon: "fas fa-shield-alt", level: 85 }, // [cite: 111, 127]
+  { name: "jMeter (Load Testing)", icon: "fas fa-tachometer-alt", level: 80 }, // [cite: 110]
+
+  // Leadership & System Design
+  { name: "Agile/Jira/Scrum", icon: "fas fa-tasks", level: 95 }, // 
+  { name: "System Design (Dia/Draw.IO/Miro)", icon: "fas fa-project-diagram", level: 90 }, // 
+  { name: "Mentoring & Leadership", icon: "fas fa-users", level: 95 }, // [cite: 28, 37, 141]
+  { name: "Problem Solving", icon: "fas fa-lightbulb", level: 95 } // [cite: 28, 141, 175]
+ ];
 </script>
 
 <style scoped>
