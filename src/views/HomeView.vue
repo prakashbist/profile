@@ -5,11 +5,11 @@
 
       <h1>Prakash Bist</h1>
       <p>Principal Software Engineer | Computer Science UnderGraduate</p>
-      <p class="description-text ">
+      <p class="description-text" style="text-align: justify;">
         Highly accomplished Principal Software Engineer with over 10+ years of experience architecting, delivering, and scaling high-availability enterprise and fintech platforms. Deep expertise in the Java ecosystem (Java EE, Spring Boot, Spring Cloud, Quarkus) and modern frontend frameworks (Angular, Vue.js, with strong experience in JSF and JSP). A proven technical leader with a consistent record of reducing technical debt, improving system performance, and building high-performing engineering teams. Adept at aligning long-term technical strategy with business objectives, regulatory requirements, and feasibility-driven case studies.
       </p>
-      <RouterLink to="/about">
-        <Button label="Learn More About Me" class="custom-button p-button-raised" />
+      <RouterLink to="/experience">
+        <Button label="View My Experience" class="custom-button p-button-raised" />
       </RouterLink>
     </section>
   </div>
