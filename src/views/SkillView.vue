@@ -73,7 +73,8 @@ const skills = [
   { name: "Agile/Jira/Scrum", icon: "fas fa-tasks", level: 95 }, // 
   { name: "System Design (Dia/Draw.IO/Miro)", icon: "fas fa-project-diagram", level: 90 }, // 
   { name: "Mentoring & Leadership", icon: "fas fa-users", level: 95 }, // [cite: 28, 37, 141]
-  { name: "Problem Solving", icon: "fas fa-lightbulb", level: 95 } // [cite: 28, 141, 175]
+  { name: "Problem Solving", icon: "fas fa-lightbulb", level: 95 }, // [cite: 28, 141, 175]
+  { name: "Amazon Web Services (AWS), Google Cloud Platform (GCP)", icon: "fas fa-cloud", level: 70 }
  ];
 </script>
 
