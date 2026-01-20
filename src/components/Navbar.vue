@@ -1,11 +1,5 @@
 <template>
   <Menubar :model="items" class="menubar"></Menubar>
-
-<!--    <template #end>-->
-<!--    <div style="margin-top: 40px;">-->
-<!--      <Button icon="fa fa-palette" class="p-button-outlined switch-theme-button" @click="switchTheme">Switch Theme</Button>-->
-<!--    </div>-->
-<!--  </template>-->
 </template>
 
 <script setup>
@@ -26,31 +20,22 @@ const items = [
   { label: 'Contact', icon: 'pi pi-fw pi-phone', command: () => router.push('/contact') }
 ];
 
-
-// Inject the reactive currentTheme(globally provided by main.js) provided by the main app
 const currentTheme = inject('currentTheme');
 
-// Function to switch theme
 const switchTheme = () => {
-  currentTheme.theme = currentTheme.theme === Aura ? Lara : Aura; // Toggle between themes
-
-  // Update PrimeVue theme configuration dynamically by setting it in the document(updated data theme attribute in the documents html tag)
+  currentTheme.theme = currentTheme.theme === Aura ? Lara : Aura;
   document.documentElement.setAttribute('data-theme', currentTheme.value);
 };
 
 </script>
-
 <style scoped>
 .menubar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensures the navbar stays on top */
+  z-index: 1000;
   font-size: 1rem;
-}
-
-
-
+} 
 </style>
 

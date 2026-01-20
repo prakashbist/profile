@@ -1,20 +1,34 @@
 <template>
- <div class="project">
-  <section id="my-projects">
+  <section class="section-wrapper">
     <h2 class="section-title">Personal Projects</h2>
-    <div class="projects-container">
-      <div v-for="project in projects" :key="project.id" class="project-card"
-      @click="navigateToDetail(project.id)">
-        <div class="project-info">
-          <h3 class="project-name">{{ project.name }}</h3>
-         <p>{{ project.description }}</p>      <!-- Dynamic binding -->
-          <a :href="project.link" target="_blank" class="project-link">View Source Code</a>
+
+    <div class="card-container">
+      <div
+        v-for="project in projects"
+        :key="project.id"
+        class="card"
+        @click="navigateToDetail(project.id)"
+      >
+        <img
+          :src="project.imageSrc"
+          class="card-logo"
+          alt="Project"
+        />
+
+        <div class="card-body">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <a
+            :href="project.link"
+            target="_blank"
+            class="project-link"
+          >
+            View Source Code
+          </a>
         </div>
       </div>
-
     </div>
   </section>
-  </div>
 </template>
 
 <script setup>
@@ -24,8 +38,7 @@ import customerReachImg from '@/assets/project.png';
 import hmsImg from '@/assets/project.png';
 
 import { useRouter } from "vue-router";
-
-const router = useRouter(); //useRouter() hook for navigation
+const router = useRouter();
 
 const navigateToDetail = (projectId) => {
   router.push({ name: 'ProjectDetail', params: { id: projectId } });
@@ -74,132 +87,85 @@ const projects = [
     imageSrc: hmsImg,
     link: 'https://bitbucket.org/prakashbistdeveloper/workspace/projects/DA'
   }
-  
 ];
 </script>
 
 <style scoped>
+/* SAME CSS AS EXPERIENCE VIEW */
 
-.project {
-  padding: 4rem 2rem 2rem 2rem; /* top padding larger to avoid navbar overlap */
-  background-color: white;
-  color: #333;
-  min-height: 92vh;
-  box-sizing: border-box;
+.section-wrapper {
+  padding: 3rem 2rem;
+  background: #f5f6fa;
+  min-height: 90vh;
 }
 
-#my-projects {
-  padding: 20px;
-  background-color: #f0f0f5;
-  //height: 100vh;
-}
-
-h2.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.section-title {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #2c3e50;
 }
 
-.projects-container {
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  cursor: pointer;
+  gap: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 20px);
-  margin-bottom: 20px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-.project-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover;
+.card-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.project-info {
-  padding: 15px;
-}
-
-.project-info h3.project-name {
+.card-body h3 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #2c3e50;
+  font-size: 1.4rem;
+  color: #34495e;
 }
 
-.project-info p {
-  font-size: 1.1rem;
+.card-body p {
+  margin: 8px 0;
+  font-size: 1rem;
   color: #666;
 }
 
 .project-link {
-  margin-top: 10px;
-  font-size: 16px;
   color: #3498db;
   text-decoration: none;
-  display: inline-block;
 }
 
 .project-link:hover {
   text-decoration: underline;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .project-card {
-    width: calc(100% - 20px);
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-img {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-
-  .project-info h3.project-name {
-    font-size: 1.25rem;
-  }
-
-  .project-info p {
-    font-size: 1rem;
-  }
-
-  .projects-container {
-    gap: 1rem;
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 480px) {
-  h2.section-title {
-    font-size: 1.5rem;
-  }
-
-  .project-card {
-    padding: 10px;
-  }
-
-  .project-info {
-    padding: 10px;
-  }
-
-  .project-info h3.project-name {
-    font-size: 1.2rem;
-  }
-
-  .project-info p {
-    font-size: 0.9rem;
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 </style>
