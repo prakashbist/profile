@@ -102,7 +102,7 @@ const experiences = [
     role: "Junior Software Engineer",
     organisation: "Synergy Tech Software",
     url:"https://synergytechsoft.com.np/",
-    startDate: "Dec, 2016 ",
+    startDate: "Dec, 2015 ",
     endDate: "Dec, 2017",
     experiences: [
       "Assist in requirement analysis, coding, and testing.",
@@ -111,22 +111,6 @@ const experiences = [
       "Support deployment and documentation tasks."
     ],
     imageSrc: synergyImg
-  },
-  {
-    role: "Java Developer",
-    organisation: "Softhover",
-    url:"https://softhover.com/",
-    startDate: "July, 2016 ",
-    endDate: "Dec, 2016",
-    experiences: [
-      "Coding and Front end Designing.",
-      "Self Learning and implementing required features on the system.",
-      "Maintaining code version and documentation.",
-      "Submitting code and features to the project manager.",
-      "Keep track of daily work log.",
-      "Involving in different programs organized by the office."
-    ],
-    imageSrc: softhoverImg
   }
 ];
 </script>
