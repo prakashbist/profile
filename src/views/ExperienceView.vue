@@ -102,7 +102,7 @@ const experiences = [
     role: "Junior Software Engineer",
     organisation: "Synergy Tech Software",
     url:"https://synergytechsoft.com.np/",
-    startDate: "Dec, 2015 ",
+    startDate: "April, 2016 ",
     endDate: "Dec, 2017",
     experiences: [
       "Assist in requirement analysis, coding, and testing.",
